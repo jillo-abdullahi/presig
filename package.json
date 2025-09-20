@@ -3,5 +3,11 @@
   "private": true,
   "workspaces": [
     "packages/core"
-  ]
+  ],
+  "dependencies": {
+    "viem": "^2.37.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
 }
