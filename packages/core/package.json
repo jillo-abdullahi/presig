@@ -1,0 +1,51 @@
+{
+  "name": "@presig/core",
+  "version": "0.1.0",
+  "description": "Deterministic Ethereum transaction decoder with risk insights - know what you sign before you sign",
+  "keywords": ["ethereum", "transaction", "decoder", "security", "risk", "analysis"],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jillo-abdullahi/presig.git",
+    "directory": "packages/core"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm --clean",
+    "test": "vitest run",
+    "dev": "vitest watch",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "clean": "rimraf dist"
+  },
+  "peerDependencies": {
+    "viem": "^2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "eslint": "^9.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "viem": "^2.17.4",
+    "vitest": "^2.1.2"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "presig",
+  "private": true,
+  "workspaces": [
+    "packages/core"
+  ]
+}
